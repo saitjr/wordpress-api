@@ -1,0 +1,1 @@
+a:6:{i:0;s:7:"meta_id";i:1;s:7:"post_id";i:2;s:8:"meta_key";i:3;s:10:"meta_value";s:3:"_pk";s:7:"meta_id";s:5:"_type";a:4:{s:7:"meta_id";s:19:"bigint(20) unsigned";s:7:"post_id";s:19:"bigint(20) unsigned";s:8:"meta_key";s:12:"varchar(255)";s:10:"meta_value";s:8:"longtext";}}
