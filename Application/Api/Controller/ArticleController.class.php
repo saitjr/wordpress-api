@@ -20,7 +20,6 @@ class ArticleController extends ApiController {
 		}
 		$startRow = $page * $pageSize;
 		$articleModel = M('posts');
-		//->field(array('wposts.ID'=>'id', 'post_date' => 'date', 'post_title' => 'title', 'comment_count' => 'commentCount', 'post_author' => 'authorId', 'wusers.user_nicename' => 'authorName', 'wpostmeta.meta_value' => 'views', 'wtt.term_id' => 'categoryId', 'wt.name' => 'categoryName'))
 		$articleList = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr, wp_posts wposts, wp_postmeta wpostmeta, wp_users wusers')->field(array('wposts.ID'=>'id', 'post_date' => 'date', 'post_title' => 'title', 'comment_count' => 'commentCount', 'post_author' => 'authorId', 'wusers.user_nicename' => 'authorName', 'wpostmeta.meta_value' => 'views', 'wtt.term_id' => 'categoryId', 'wt.name' => 'categoryName'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = wposts.ID AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category' AND wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author AND wposts.post_status = 'publish' AND wposts.post_type = 'post'")->limit($startRow, $pageSize)->order('wposts.id desc')->select();
 		
 		$this->jsonReturn(array('articleList' => $articleList), '读取成功', 1);
