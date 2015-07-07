@@ -420,3 +420,705 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000657s ]
 
+[ 2015-07-07T14:49:54+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 0,15   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000932s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001032s ]
+
+[ 2015-07-07T14:53:10+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+
+[ 2015-07-07T14:53:40+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 0,15   [ RunTime:0.0007s ]
+
+[ 2015-07-07T14:53:50+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 0,15   [ RunTime:0.0010s ]
+
+[ 2015-07-07T14:54:45+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 30,15   [ RunTime:0.0010s ]
+
+[ 2015-07-07T14:54:49+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 300,15   [ RunTime:0.0008s ]
+
+[ 2015-07-07T14:55:33+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 300,15   [ RunTime:0.0009s ]
+
+[ 2015-07-07T14:55:44+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 30,15   [ RunTime:0.0017s ]
+
+[ 2015-07-07T14:56:12+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 30,15   [ RunTime:0.0008s ]
+
+[ 2015-07-07T14:56:17+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( post_status = 'publish' AND post_type = 'post' ) ORDER BY id desc LIMIT 300,15   [ RunTime:0.0008s ]
+
+[ 2015-07-07T15:12:05+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM wp_posts wposts,wp_postmeta wpostmeta WHERE ( wposts.id = wpostmeta.post_id )  [ RunTime:0.0132s ]
+
+[ 2015-07-07T15:12:18+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0018s ]
+SQL: SELECT * FROM wp_posts wposts,wp_postmeta wpostmeta WHERE ( wposts.id = wpostmeta.post_id )  [ RunTime:0.0117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2015-07-07T15:13:36+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'wpostmeta.mata_key' in 'where clause'
+
+[ 2015-07-07T15:13:50+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+SQL: SELECT * FROM wp_posts wposts,wp_postmeta wpostmeta WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' )  [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000635s ]
+
+[ 2015-07-07T15:23:51+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in /Users/tangjr/Sites/BRIGHTTJ-API/Application/Api/Controller/ArticleController.class.php on line 21 and defined /Users/tangjr/Sites/BRIGHTTJ-API/ThinkPHP/Library/Think/Model.class.php 第 1720 行.
+NOTIC: [8] Undefined variable: field /Users/tangjr/Sites/BRIGHTTJ-API/ThinkPHP/Library/Think/Model.class.php 第 1721 行.
+NOTIC: [8] Undefined variable: field /Users/tangjr/Sites/BRIGHTTJ-API/ThinkPHP/Library/Think/Model.class.php 第 1731 行.
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM wp_posts wposts,wp_postmeta wpostmeta WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' ) ORDER BY id desc  [ RunTime:0.0038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006634s ]
+
+[ 2015-07-07T15:28:32+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in /Users/tangjr/Sites/BRIGHTTJ-API/Application/Api/Controller/ArticleController.class.php on line 21 and defined /Users/tangjr/Sites/BRIGHTTJ-API/ThinkPHP/Library/Think/Model.class.php 第 1720 行.
+NOTIC: [8] Undefined variable: field /Users/tangjr/Sites/BRIGHTTJ-API/ThinkPHP/Library/Think/Model.class.php 第 1721 行.
+NOTIC: [8] Undefined variable: field /Users/tangjr/Sites/BRIGHTTJ-API/ThinkPHP/Library/Think/Model.class.php 第 1731 行.
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM wp_posts wposts,wp_postmeta wpostmeta WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' ) ORDER BY id desc  [ RunTime:0.0043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006755s ]
+
+[ 2015-07-07T15:31:37+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0019s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount` FROM wp_posts wposts,wp_postmeta wpostmeta WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' ) ORDER BY id desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2015-07-07T15:39:40+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0018s ]
+SQL: SELECT `ID` AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `author` FROM wp_posts wposts,wp_postmeta wpostmeta WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' ) ORDER BY id desc  [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006655s ]
+
+[ 2015-07-07T15:40:52+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0013s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'brighttj_wp.pusers' doesn't exist
+
+[ 2015-07-07T15:41:03+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users pusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' ) ORDER BY id desc  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2015-07-07T15:44:34+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'authorName' in 'field list'
+
+[ 2015-07-07T15:45:17+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0009s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author ) ORDER BY id desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2015-07-07T15:46:16+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author ) ORDER BY id desc LIMIT 300,15   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2015-07-07T15:46:33+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0013s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author ) ORDER BY id desc LIMIT 30,15   [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2015-07-07T15:54:01+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0014s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author ) ORDER BY id desc LIMIT 30,15   [ RunTime:0.0022s ]
+
+[ 2015-07-07T15:54:14+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0020s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author ) ORDER BY id desc LIMIT 30,15   [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006818s ]
+
+[ 2015-07-07T15:54:21+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0013s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author ) ORDER BY id desc LIMIT 15,15   [ RunTime:0.0038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2015-07-07T15:56:06+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0018s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'wposts.post_type = 'post' ) ORDER BY id desc LIMIT 15,15' at line 1
+
+[ 2015-07-07T15:56:42+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author AND wposts.post_status = 'publish' AND wposts.post_type = 'post' ) ORDER BY id desc LIMIT 15,15   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2015-07-07T15:56:53+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0015s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author AND wposts.post_status = 'publish' AND wposts.post_type = 'post' ) ORDER BY id desc LIMIT 0,15   [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2015-07-07T15:57:27+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0012s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author AND wposts.post_status = 'publish' AND wposts.post_type = 'post' ) ORDER BY id desc LIMIT 0,15   [ RunTime:0.0018s ]
+
+[ 2015-07-07T16:14:17+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+
+[ 2015-07-07T16:14:33+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+
+[ 2015-07-07T16:14:43+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=90
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SELECT `ID` AS `id` FROM `wp_posts`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2015-07-07T16:14:52+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SELECT `ID` AS `id` FROM `wp_posts`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2015-07-07T16:15:45+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SELECT `ID` AS `id` FROM `wp_posts`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000863s ]
+
+[ 2015-07-07T16:16:21+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SELECT `ID` AS `id` FROM `wp_posts` WHERE ( ID = 11 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2015-07-07T16:21:24+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000780s ]
+SQL: SELECT `ID` AS `id` FROM `wp_posts` WHERE ( ID = 11 )  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000905s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000999s ]
+
+[ 2015-07-07T16:28:50+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SELECT `ID` AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( ID = 11 )  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2015-07-07T16:34:02+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SELECT `ID` AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( ID = 11 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: content /Users/tangjr/Sites/BRIGHTTJ-API/Application/Api/Controller/ArticleController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2015-07-07T16:34:17+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SELECT `ID` AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( ID = 11 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2015-07-07T16:49:48+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=90
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001537s ]
+SQL: SELECT `ID` AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( ID = 90 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined offset: 0 /Users/tangjr/Sites/BRIGHTTJ-API/Application/Api/Controller/ArticleController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002590s ]
+
+[ 2015-07-07T16:49:49+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000926s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002351s ]
+SQL: SELECT `ID` AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( ID = 11 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2015-07-07T16:52:39+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SELECT `ID` AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM `wp_posts` WHERE ( ID = 11 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2015-07-07T16:58:00+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0018s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ID' in field list is ambiguous
+
+[ 2015-07-07T16:58:10+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0020s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ID' in where clause is ambiguous
+
+[ 2015-07-07T16:58:12+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'ID' in where clause is ambiguous
+
+[ 2015-07-07T16:58:24+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 )  [ RunTime:0.0511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2015-07-07T16:59:14+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 AND wusers.ID = wposts.post_author )  [ RunTime:0.0163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2015-07-07T16:59:15+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0021s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 AND wusers.ID = wposts.post_author )  [ RunTime:0.0145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2015-07-07T16:59:38+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0017s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 AND wusers.ID = wposts.post_author )  [ RunTime:0.0161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2015-07-07T17:00:47+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0019s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 AND wusers.ID = wposts.post_author )  [ RunTime:0.0172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000450s ]
+
+[ 2015-07-07T17:00:57+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0016s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 AND wusers.ID = wposts.post_author )  [ RunTime:0.0134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2015-07-07T17:02:40+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0019s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 AND wusers.ID = wposts.post_author AND wpostmeta.meta_key = 'views' )  [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2015-07-07T17:02:54+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0021s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 AND wusers.ID = wposts.post_author AND wpostmeta.meta_key = 'views' )  [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2015-07-07T17:09:43+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0019s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 11 AND wusers.ID = wposts.post_author AND wpostmeta.meta_key = 'views' )  [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `wp_comments` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `wp_comments` WHERE ( comment_post_ID = 11 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2015-07-07T17:10:36+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=1152
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0012s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 1152 AND wusers.ID = wposts.post_author AND wpostmeta.meta_key = 'views' )  [ RunTime:0.0021s ]
+SQL: SELECT * FROM `wp_comments` WHERE ( comment_post_ID = 1152 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2015-07-07T17:14:29+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=1152
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0019s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 1152 AND wusers.ID = wposts.post_author AND wpostmeta.meta_key = 'views' )  [ RunTime:0.0020s ]
+SQL: SELECT `comment_id` AS `commentId`,`comment_author` AS `commentAuthor`,`comment_author_email` AS `commentAuthorEmail`,`comment_date` AS `commentDate`,`comment_content` AS `commentContent` FROM `wp_comments` WHERE ( comment_post_ID = 1152 )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2015-07-07T17:17:26+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=1152
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0012s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 1152 AND wusers.ID = wposts.post_author AND wpostmeta.meta_key = 'views' )  [ RunTime:0.0023s ]
+SQL: SELECT `comment_id` AS `commentId`,`comment_author` AS `commentAuthor`,`comment_author_email` AS `commentAuthorEmail`,`comment_date` AS `commentDate`,`comment_content` AS `commentContent` FROM `wp_comments` WHERE ( comment_post_ID = 1152 )  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2015-07-07T17:19:45+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articleById?articleId=1152
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `wp_posts` [ RunTime:0.0016s ]
+SQL: SELECT wposts.ID AS `id`,`post_content` AS `content`,`post_title` AS `title`,`post_date` AS `date`,`comment_count` AS `commentCount`,wusers.user_nicename AS `authorName`,`post_author` AS `authorId`,wpostmeta.meta_value AS `views` FROM wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wposts.ID = 1152 AND wusers.ID = wposts.post_author AND wpostmeta.meta_key = 'views' )  [ RunTime:0.0023s ]
+SQL: SELECT `comment_id` AS `commentId`,`comment_author` AS `commentAuthor`,`comment_author_email` AS `commentAuthorEmail`,`comment_date` AS `commentDate`,`comment_content` AS `commentContent` FROM `wp_comments` WHERE ( comment_post_ID = 1152 )  [ RunTime:0.0002s ]
+
