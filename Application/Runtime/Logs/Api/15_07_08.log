@@ -1,0 +1,10 @@
+[ 2015-07-08T17:48:56+08:00 ] ::1 /BRIGHTTJ-API/index.php/api/article/articlelist?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `wp_term_taxonomy` [ RunTime:0.0017s ]
+SQL: SELECT wposts.ID AS `id`,`post_date` AS `date`,`post_title` AS `title`,`comment_count` AS `commentCount`,`post_author` AS `authorId`,wusers.user_nicename AS `authorName`,wpostmeta.meta_value AS `views`,wtt.term_id AS `categoryId`,wt.name AS `categoryName` FROM wp_term_taxonomy wtt,wp_terms wt,wp_term_relationships wtr,wp_posts wposts,wp_postmeta wpostmeta,wp_users wusers WHERE ( wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = wposts.ID AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category' AND wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author AND wposts.post_status = 'publish' AND wposts.post_type = 'post' ) ORDER BY wposts.id desc LIMIT 30,15   [ RunTime:0.0257s ]
+
