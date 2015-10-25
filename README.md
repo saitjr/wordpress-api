@@ -2,6 +2,10 @@
 
 wordpress的api接口
 
+## 发现的bug
+
+今天刚发现一个bug，如果一篇文章同时属于两个分类，则【获取文章列表】接口中，文章会出现两次。还未解决。
+
 ## 技术支持
 
 [http://www.brighttj.com/wordpress/wordpress-api.html](http://www.brighttj.com/wordpress/wordpress-api.html)
