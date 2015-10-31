@@ -20,7 +20,21 @@ class ArticleController extends ApiController {
 		}
 		$startRow = $page * $pageSize;
 		$articleModel = M('posts');
-		$articleList = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr, wp_posts wposts, wp_postmeta wpostmeta, wp_users wusers')->field(array('wposts.ID'=>'id', 'post_date' => 'date', 'post_title' => 'title', 'comment_count' => 'commentCount', 'post_author' => 'authorId', 'wusers.user_nicename' => 'authorName', 'wpostmeta.meta_value' => 'views', 'wtt.term_id' => 'categoryId', 'wt.name' => 'categoryName'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = wposts.ID AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category' AND wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author AND wposts.post_status = 'publish' AND wposts.post_type = 'post'")->limit($startRow, $pageSize)->order('wposts.id desc')->select();
+		
+		$articleList = $articleModel->table('wp_posts wp, wp_postmeta wpostmeta')->field(array('ID' => 'id', 'post_date' => 'date', 'post_title' => 'title', 'post_author', 'comment_count' => 'commentCount', 'wpostmeta.meta_value' => 'views'))->where("post_status = 'publish' AND post_type = 'post' AND wp.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views'")->limit($startRow, $pageSize)->order('id DESC')->select();
+		
+		foreach ($articleList as $key => $value) {
+
+			$authorId = $value["post_author"];
+			$postId = $value['id'];
+			$value['author'] = $this->authorByAuthorId($authorId);
+			unset($value['post_author']);
+
+			$categorys = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr')->field(array('wtt.term_taxonomy_id' => 'id', 'name', 'count'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = $postId AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category'")->select();
+			$value['categorys'] = $categorys;
+
+			$articleList[$key] = $value;
+		}
 		
 		$this->jsonReturn(array('articleList' => $articleList), '读取成功', 1);
 		return;
@@ -39,7 +53,7 @@ class ArticleController extends ApiController {
 			return;
 		}
 		$articleModel = M('posts');
-		$articleList = $articleModel->table('wp_posts wposts, wp_postmeta wpostmeta, wp_users wusers')->field(array('wposts.ID' => 'id', 'post_content' => 'content', 'post_title' => 'title', 'post_date' => 'date', 'comment_count' => 'commentCount', 'wusers.user_nicename' => 'authorName', 'post_author' => 'authorId', 'wpostmeta.meta_value' => 'views'))->where("wposts.ID = $articleId AND wusers.ID = wposts.post_author AND wpostmeta.meta_key = 'views'")->select();
+		$articleList = $articleModel->table('wp_posts wposts, wp_postmeta wpostmeta')->field(array('wposts.ID' => 'id', 'post_content' => 'content', 'post_title' => 'title', 'post_date' => 'date', 'comment_count' => 'commentCount', 'post_author', 'wpostmeta.meta_value' => 'views'))->where("wposts.ID = $articleId AND wpostmeta.meta_key = 'views'")->select();
 		$articleInfo = $articleList[0];
 
 		if (empty($articleInfo)) {
@@ -54,7 +68,13 @@ class ArticleController extends ApiController {
 		$commentList = $commentModel->field(array('comment_id' => 'commentId', 'comment_author' => 'commentAuthor', 'comment_author_email' => 'commentAuthorEmail', 'comment_date' => 'commentDate', 'comment_content' => 'commentContent'))->where("comment_post_ID = $articleId")->select();
 
 		$articleInfo['comments'] = $commentList;
-		// dump($articleInfo);
+		$articleInfo['author'] = $this->authorByAuthorId($articleInfo['post_author']);
+		unset($value['post_author']);
+
+		$postId = $articleInfo["id"];
+		$categorys = $this->categoryByPostId($postId);
+		$articleInfo['categorys'] = $categorys;
+
 		$this->jsonReturn(array('articleInfo' => $articleInfo), '读取成功', 1);
 		return;
 	}
@@ -105,11 +125,76 @@ class ArticleController extends ApiController {
 		}
 
 		$startRow = $page * $pageSize;
-		$termModel = M('terms');
+		$articleModel = M('posts');
 
-		$articleList = $termModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr, wp_posts wposts, wp_postmeta wpostmeta, wp_users wusers')->field(array('wposts.ID'=>'id', 'post_date' => 'date', 'post_title' => 'title', 'comment_count' => 'commentCount', 'post_author' => 'authorId', 'wusers.user_nicename' => 'authorName', 'wpostmeta.meta_value' => 'views', 'wtt.term_id' => 'categoryId', 'wt.name' => 'categoryName'))->where("wtt.term_id = $categoryId AND wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = wposts.ID AND wt.term_id = wtt.term_id AND wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wusers.ID = wposts.post_author AND wposts.post_status = 'publish' AND wposts.post_type = 'post'")->limit($startRow, $pageSize)->order('id desc')->select();
+		$articleList = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr, wp_posts wposts, wp_postmeta wpostmeta')->field(array('wposts.ID'=>'id', 'post_date' => 'date', 'post_title' => 'title', 'comment_count' => 'commentCount', 'wpostmeta.meta_value' => 'views', 'post_author'))->where("wtt.term_taxonomy_id = $categoryId AND wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = wposts.ID AND wt.term_id = wtt.term_id AND wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wposts.post_status = 'publish' AND wposts.post_type = 'post' AND wtt.taxonomy = 'category'")->limit($startRow, $pageSize)->order('id desc')->select();
 		
+		foreach ($articleList as $key => $value) {
+
+			$authorId = $value["post_author"];
+			$postId = $value['id'];
+			$value['author'] = $this->authorByAuthorId($authorId);
+			unset($value['post_author']);
+			
+			$postId = $value["id"];
+			$categorys = $this->categoryByPostId($postId);
+			$value['categorys'] = $categorys;
+
+			$articleList[$key] = $value;
+		}
+
 		$this->jsonReturn(array('articleList' => $articleList), '读取成功', 1);
 		return;
+	}
+
+	public function hotArticles() {
+
+		$categoryId = I('categoryId');
+		$articleCount = I('articleCount');
+
+		if ($articleCount <= 0) {
+			$articleCount = 10;
+		}
+
+		$articleModel = M('posts');
+
+		$articleList = null;
+
+		if ($categoryId <= 0) {
+			$articleList = $articleModel->table('wp_posts wp, wp_postmeta wpostmeta')->field(array('ID' => 'id', 'post_date' => 'date', 'post_title' => 'title', 'post_author', 'comment_count' => 'commentCount', 'meta_value' => 'views'))->where("post_status = 'publish' AND post_type = 'post' AND wp.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views'")->limit(0, $articleCount)->order('CONVERT(views, SIGNED) DESC')->select();
+		} else {
+			$articleList = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr, wp_posts wposts, wp_postmeta wpostmeta')->field(array('wposts.ID'=>'id', 'post_date' => 'date', 'post_title' => 'title', 'comment_count' => 'commentCount', 'wpostmeta.meta_value' => 'views', 'post_author'))->where("wtt.term_id = $categoryId AND wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = wposts.ID AND wt.term_id = wtt.term_id AND wposts.id = wpostmeta.post_id AND wpostmeta.meta_key = 'views' AND wposts.post_status = 'publish' AND wposts.post_type = 'post'")->limit(0, $articleCount)->order('CONVERT(views, SIGNED) DESC')->select();
+		}
+		
+		foreach ($articleList as $key => $value) {
+			
+			$authorId = $value["post_author"];
+			$postId = $value['id'];
+			$value['author'] = $this->authorByAuthorId($authorId);
+			unset($value['post_author']);
+
+			$categorys = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr')->field(array('wtt.term_taxonomy_id' => 'id', 'name', 'count'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = $postId AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category'")->select();
+			$value['categorys'] = $categorys;
+
+			$articleList[$key] = $value;
+		}
+		$this->jsonReturn(array('articleList' => $articleList), '读取成功', 1);
+		return;
+	}
+
+	private function categoryByPostId($postId = 0) {
+
+		$articleModel = M('posts');
+
+		$categorys = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr')->field(array('wtt.term_taxonomy_id' => 'id', 'name', 'count'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = $postId AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category'")->select();
+		return $categorys;
+	}
+
+	private function authorByAuthorId($authorId = 0) {
+
+		$articleModel = M('posts');
+
+		$user = $articleModel->table('wp_users')->field(array('display_name' => 'name', 'ID' => 'id'))->where("ID = $authorId")->select();
+		return $user[0];
 	}
 }
