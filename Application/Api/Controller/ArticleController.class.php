@@ -146,7 +146,10 @@ class ArticleController extends ApiController {
 		$this->jsonReturn(array('articleList' => $articleList), '读取成功', 1);
 		return;
 	}
-
+	
+	/*
+		热门文章接口
+	 */
 	public function hotArticles() {
 
 		$categoryId = I('categoryId');
@@ -181,7 +184,10 @@ class ArticleController extends ApiController {
 		$this->jsonReturn(array('articleList' => $articleList), '读取成功', 1);
 		return;
 	}
-
+	
+	/*
+		私有方法：通过文章id获得该文章的分类数组
+	 */
 	private function categoryByPostId($postId = 0) {
 
 		$articleModel = M('posts');
@@ -189,7 +195,10 @@ class ArticleController extends ApiController {
 		$categorys = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr')->field(array('wtt.term_taxonomy_id' => 'id', 'name', 'count'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = $postId AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category'")->select();
 		return $categorys;
 	}
-
+	
+	/*
+		私有方法：通过文章作者id获得该作者其他信息
+	 */
 	private function authorByAuthorId($authorId = 0) {
 
 		$articleModel = M('posts');
