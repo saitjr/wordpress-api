@@ -32,7 +32,7 @@ class ArticleController extends ApiController {
 			$value['author'] = $this->authorByAuthorId($authorId);
 			unset($value['post_author']);
 
-			$categorys = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr')->field(array('wtt.term_taxonomy_id' => 'id', 'name', 'count'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = $postId AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category'")->select();
+			$categorys = $this->categoryByPostId($postId);
 			$value['categorys'] = $categorys;
 
 			$articleList[$key] = $value;
@@ -70,12 +70,12 @@ class ArticleController extends ApiController {
 		
 		$commentModel = M('comments');
 		// 通过wp_comments表获得文章评论
-		$commentList = $commentModel->field(array('comment_id' => 'commentId', 'comment_author' => 'commentAuthor', 'comment_author_email' => 'commentAuthorEmail', 'comment_date' => 'commentDate', 'comment_content' => 'commentContent'))->where("comment_post_ID = $articleId")->select();
+		$commentList = $commentModel->field(array('comment_id' => 'id', 'comment_author' => 'author', 'comment_author_email' => 'authorEmail', 'comment_date' => 'date', 'comment_content' => 'content'))->where("comment_post_ID = $articleId")->select();
 		$articleInfo['comments'] = $commentList;
 		
 		// 获得文章作者信息
 		$articleInfo['author'] = $this->authorByAuthorId($articleInfo['post_author']);
-		unset($value['post_author']);
+		unset($articleInfo['post_author']);
 	
 		// 获得文章分类信息
 		$postId = $articleInfo["id"];
@@ -190,8 +190,8 @@ class ArticleController extends ApiController {
 			$value['author'] = $this->authorByAuthorId($authorId);
 			unset($value['post_author']);
 			
-			$postId = $value['id'];
 			$categorys = $this->categoryByPostId($postId);
+			// $categorys = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr')->field(array('wtt.term_taxonomy_id' => 'id', 'name', 'count'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = $postId AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category'")->select();
 			$value['categorys'] = $categorys;
 
 			$articleList[$key] = $value;
@@ -206,7 +206,7 @@ class ArticleController extends ApiController {
 	private function categoryByPostId($postId = 0) {
 
 		$articleModel = M('posts');
-	
+
 		$categorys = $articleModel->table('wp_term_taxonomy wtt, wp_terms wt, wp_term_relationships wtr')->field(array('wtt.term_taxonomy_id' => 'id', 'name', 'count'))->where("wtt.term_taxonomy_id = wtr.term_taxonomy_id AND wtr.object_id = $postId AND wt.term_id = wtt.term_id AND wtt.taxonomy = 'category'")->select();
 		return $categorys;
 	}
